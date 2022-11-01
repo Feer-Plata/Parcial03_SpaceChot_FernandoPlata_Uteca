@@ -27,8 +27,11 @@ public class CambioEscenas : MonoBehaviour
     }
     public void Finalizar()
     {
-        //Finaliza el juego.
-        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+		Application.Quit();
+#endif
     }
     public void CtrlMenu()
     {

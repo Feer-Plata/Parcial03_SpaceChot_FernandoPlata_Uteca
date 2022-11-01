@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
     guid: 8cf5b6258c2522a44a3e5b6f74c2c344
+  - enabled: 1
+    path: Assets/Scenes/PostMortem.unity
+    guid: 4f5d13f9fbae5534ba952c8c4d7fad2d
   m_configObjects: {}

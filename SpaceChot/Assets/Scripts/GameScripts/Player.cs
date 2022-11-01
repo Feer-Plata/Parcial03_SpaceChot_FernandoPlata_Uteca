@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         if (life <= 0)
         {
             Destroy(gameObject);                                               //Si no tiene vida, lo destruye.
-            SceneManager.LoadScene(0);                                         // Abre posmortem
+            SceneManager.LoadScene(5);                                         // Abre posmortem
         }
     }
 
