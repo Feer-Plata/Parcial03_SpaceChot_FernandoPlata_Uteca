@@ -1,7 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     //Atributos Jugador
@@ -9,8 +10,9 @@ public class Player : MonoBehaviour
     public Slider barraVida;
     public float speedPlayer;
 
-    //public GameObject bala;
-    //public List<Transform> posicionesBala;
+    //Atributos Disparo
+    public GameObject bullet;
+    public List<Transform> posBullet;
 
 
     // Update is called once per frame
@@ -18,7 +20,7 @@ public class Player : MonoBehaviour
     {
         MovPlayer();
         CheckLife();
-        Bajarvida();
+        DispararBala();
     }
     public void MovPlayer()
     {
@@ -53,11 +55,25 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Bajarvida()
+    public void DispararBala()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Baja vida");
+
+            Instantiate(bullet, posBullet[0].position, Quaternion.identity);
+            Instantiate(bullet, posBullet[1].position, Quaternion.identity);
+        }
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        //Si el jugador toca al destructor, pierde toda la vida.
+        if (other.tag == "Destroyer")
+        {
+            life = 0;
+        }
+        if (other.tag == "Enemy")
+        {
             life--;
             barraVida.value = life;
         }

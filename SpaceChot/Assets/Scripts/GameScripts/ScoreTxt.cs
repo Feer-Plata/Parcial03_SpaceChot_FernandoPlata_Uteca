@@ -17,6 +17,6 @@ public class ScoreTxt : MonoBehaviour
 public class Scoring : MonoBehaviour
 {
     //Atributos
-    public static int score;
+    public static int score = 0;
 }
 

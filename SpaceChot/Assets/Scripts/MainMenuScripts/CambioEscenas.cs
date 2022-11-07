@@ -12,13 +12,16 @@ public class CambioEscenas : MonoBehaviour
     public void Iniciar()
     {
         //Carga el juego.
+        Scoring.score = 0;
         SceneManager.LoadScene(1);
+
     }
     public void ReIniciar()
     {
         //Carga el juego.
+        Scoring.score = 0;
         SceneManager.LoadScene(1);
-        //score en cero.
+
     }
     public void SettingsMenu()
     {
@@ -40,17 +43,22 @@ public class CambioEscenas : MonoBehaviour
     }
     public void CreditsMenu()
     {
-        //Carga el Menu de controles.
+        //Carga el Menu de creditos.
         SceneManager.LoadScene(4);
     }
     public void CtrlASettings()
     {
-        //Carga el Menu de controles.
+        //Carga el Menu de configuracion.
         SceneManager.LoadScene(2);
     }
     public void CreditsASettings()
     {
-        //Carga el Menu de controles.
+        //Carga el Menu de configuracion.
         SceneManager.LoadScene(2);
+    }
+    public void SettingsAPrincipal()
+    {
+        //Carga el Menu principal.
+        SceneManager.LoadScene(0);
     }
 }

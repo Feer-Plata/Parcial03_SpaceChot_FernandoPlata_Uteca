@@ -9,20 +9,11 @@ public class MovDestructor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (this.transform.position.x > -8)
-        //{
-        //    this.transform.position = new Vector3(-25, 0, 0);
-        //}
-        //transform.Translate(0, 0, speedDesplace * Time.deltaTime);
-
-        transform.Translate(0, 0, speedDesplace * Time.deltaTime);
         if (this.transform.position.x > -8)
         {
-            transform.Translate(0, 0, -speedDesplace * Time.deltaTime);
+            this.transform.position = new Vector3(-25, 0, 0);
         }
-        //else if (this.transform.position.x > -25)
-        //{
-        //    transform.Translate(0, 0, -speedDesplace * Time.deltaTime);
-        //}
+        transform.Translate(0, 0, speedDesplace * Time.deltaTime);
+
     }
 }
