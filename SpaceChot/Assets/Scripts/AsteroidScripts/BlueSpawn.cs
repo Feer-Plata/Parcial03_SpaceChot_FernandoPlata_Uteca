@@ -17,7 +17,7 @@ public class BlueSpawn : MonoBehaviour
     {
         if (PuedeSpawnear)
         {
-            StartCoroutine(SpawnAsteroids(4f));
+            StartCoroutine(SpawnAsteroids(1.5f));
         }
     }
     IEnumerator SpawnAsteroids(float time)

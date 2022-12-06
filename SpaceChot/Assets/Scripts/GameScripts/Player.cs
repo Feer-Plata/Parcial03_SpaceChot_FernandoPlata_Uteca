@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
 
             Instantiate(bullet, posBullet[0].position, Quaternion.identity);
             Instantiate(bullet, posBullet[1].position, Quaternion.identity);
+            AudioManager.Instance.PlaySFX("Bullet");
         }
 
     }
